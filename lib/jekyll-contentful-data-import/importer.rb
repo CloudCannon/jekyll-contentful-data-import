@@ -102,7 +102,8 @@ module Jekyll
           dynamic_entries: :auto,
           raise_errors: true,
           integration_name: 'jekyll',
-          integration_version: Jekyll::Contentful::VERSION
+          integration_version: Jekyll::Contentful::VERSION,
+          max_include_resolution_depth: 2
         }.merge(options)
 
         ::Contentful::Client.new(options)
